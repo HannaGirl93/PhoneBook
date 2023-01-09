@@ -1,4 +1,10 @@
 package manager;
 
-public class HeplerUser {
+import org.openqa.selenium.WebDriver;
+
+public class HeplerUser extends HelperBase{
+
+    public HeplerUser(WebDriver wd) {
+        super(wd);
+    }
 }

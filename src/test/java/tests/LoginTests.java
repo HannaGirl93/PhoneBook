@@ -1,6 +1,6 @@
 package tests;
 
-public class LoginTests {
+public class LoginTests extends TestBase{
 
 
 }

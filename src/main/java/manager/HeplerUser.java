@@ -6,22 +6,23 @@ import org.openqa.selenium.WebDriver;
 public class HeplerUser extends HelperBase {
 
     public HeplerUser(WebDriver wd) {
+
         super(wd);
     }
 
     public void openLoginRegistrationForm() {
-        click(By.cssSelector(""));
+        click(By.cssSelector("a:last-child"));
     }
 
     public void fillLoginRegistrationForm(String email, String password) {
         //for email
-        type(By.cssSelector(""), email);
+        type(By.cssSelector("input[name='email']"), email);
         //for password
-        type(By.cssSelector(""), password);
+        type(By.cssSelector("input[name='password']"), password);
     }
 
     public void submitLogin() {
-        click(By.cssSelector(""));
+        click(By.cssSelector("button[name='login']"));
 
     }
 }

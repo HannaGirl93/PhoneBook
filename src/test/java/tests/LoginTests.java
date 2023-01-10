@@ -14,6 +14,15 @@ public class LoginTests extends TestBase{
     }
 
     @Test
+    public void loginSuccessNew(){
+
+        app.getHeplerUser().openLoginRegistrationForm();
+        app.getHeplerUser().fillLoginRegistrationForm("bunny1@mail.com", "Bunny12345$");
+        app.getHeplerUser().submitLogin();
+
+    }
+
+    @Test
     public void loginWrongEmail(){
 
     }

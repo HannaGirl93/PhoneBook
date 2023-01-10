@@ -11,6 +11,7 @@ public class HeplerUser extends HelperBase {
     }
 
     public void openLoginRegistrationForm() {
+
         click(By.cssSelector("a:last-child"));
     }
 

@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -22,6 +23,7 @@ public class LoginTests extends TestBase{
         app.getHeplerUser().fillLoginRegistrationForm("bunny@mail.com", "Bunny12345$");
         app.getHeplerUser().submitLogin();
         //logout
+        Assert.assertTrue(app.getHeplerUser().isLogged());
     }
 
     @Test
@@ -31,7 +33,7 @@ public class LoginTests extends TestBase{
         app.getHeplerUser().fillLoginRegistrationForm("bunny1@mail.com", "Bunny12345$");
         app.getHeplerUser().submitLogin();
         //logout
-
+        Assert.assertTrue(app.getHeplerUser().isLogged());
     }
 
     @Test
@@ -39,15 +41,25 @@ public class LoginTests extends TestBase{
         app.getHeplerUser().openLoginRegistrationForm();
         app.getHeplerUser().fillLoginRegistrationForm("bunny1mail.com", "Bunny12345$");
         app.getHeplerUser().submitLogin();
+        Assert.assertFalse(app.getHeplerUser().isLogged());
+        Assert.assertTrue(app.getHeplerUser().isErrorMessageDisplayed("Wrong email or password"));
     }
 
     @Test
     public void loginWrongPassword(){
-
+        app.getHeplerUser().openLoginRegistrationForm();
+        app.getHeplerUser().fillLoginRegistrationForm("bunny1@mail.com", "Bunny12345");
+        app.getHeplerUser().submitLogin();
+        Assert.assertFalse(app.getHeplerUser().isLogged());
+        Assert.assertTrue(app.getHeplerUser().isErrorMessageDisplayed("Wrong email or password"));
     }
 
     @Test
     public void loginUnregisterUser(){
-
+        app.getHeplerUser().openLoginRegistrationForm();
+        app.getHeplerUser().fillLoginRegistrationForm("bunny93@mail.com", "Bunny12345$");
+        app.getHeplerUser().submitLogin();
+        Assert.assertFalse(app.getHeplerUser().isLogged());
+        Assert.assertTrue(app.getHeplerUser().isErrorMessageDisplayed("Wrong email or password"));
     }
 }

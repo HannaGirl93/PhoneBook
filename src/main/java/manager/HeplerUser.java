@@ -26,4 +26,12 @@ public class HeplerUser extends HelperBase {
         click(By.cssSelector("button[name='login']"));
 
     }
+
+    public boolean isLogged() {
+        return wd.findElement(By.xpath("//button[text()='Sign Out']")).isDisplayed();
+    }
+
+    public void logout() {
+        click(By.xpath("//button[text()='Sign Out']"));
+    }
 }

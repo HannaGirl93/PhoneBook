@@ -57,7 +57,7 @@ public class LoginTests extends TestBase{
     @Test
     public void loginUnregisterUser(){
         app.getHeplerUser().openLoginRegistrationForm();
-        app.getHeplerUser().fillLoginRegistrationForm("bunny93@mail.com", "Bunny12345$");
+        app.getHeplerUser().fillLoginRegistrationForm("bunny937@mail.com", "Bunny12345$");
         app.getHeplerUser().submitLogin();
         Assert.assertFalse(app.getHeplerUser().isLogged());
         Assert.assertTrue(app.getHeplerUser().isErrorMessageDisplayed("Wrong email or password"));

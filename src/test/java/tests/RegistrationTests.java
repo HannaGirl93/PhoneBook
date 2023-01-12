@@ -57,6 +57,7 @@ public class RegistrationTests extends TestBase{
         app.getHeplerUser().fillLoginRegistrationForm("bunny@mail.com", "Bunny12345$");
         app.getHeplerUser().submitRegistration();
         Assert.assertFalse(app.getHeplerUser().isLogged());
+        Assert.assertTrue(app.getHeplerUser().isErrorMessageDisplayed("User already exist"));
     }
 
 }

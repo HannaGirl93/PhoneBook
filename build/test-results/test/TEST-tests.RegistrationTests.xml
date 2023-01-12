@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.RegistrationTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-01-12T09:34:55" hostname="LAPTOP-AP8CUR31" time="14.635">
+  <properties/>
+  <testcase name="registrationSuccess" classname="tests.RegistrationTests" time="1.654"/>
+  <testcase name="registrationUserAlreadyExist" classname="tests.RegistrationTests" time="0.745"/>
+  <testcase name="registrationWrongEmail" classname="tests.RegistrationTests" time="0.979"/>
+  <testcase name="registrationWrongPassword" classname="tests.RegistrationTests" time="1.051"/>
+  <system-out><![CDATA[User already exist
+Wrong email or password format
+            Email must contains one @ and minimum 2 symbols after last dot
+            Password must contain at least one uppercase letter!
+            Password must contain at least one lowercase letter!
+            Password must contain at least one digit!
+            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!
+Wrong email or password format
+            Email must contains one @ and minimum 2 symbols after last dot
+            Password must contain at least one uppercase letter!
+            Password must contain at least one lowercase letter!
+            Password must contain at least one digit!
+            Password must contain at least one special symbol from [‘$’,’~’,’-‘,’_’]!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

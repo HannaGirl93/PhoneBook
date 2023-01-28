@@ -5,30 +5,24 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-
 public class ApplicationManager {
-
     WebDriver wd;
-    HeplerUser heplerUser;
-    HelperContact helperContact;
+    HelperUser helperUser;
+
     public void init() {
         wd = new ChromeDriver();
-        wd.manage().window().maximize();//расскрытие на весь экран
-        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));//проверка в теч 5 секунд на отрисовку элемента
+        wd.manage().window().maximize();
+        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wd.navigate().to("https://telranedu.web.app");
-        heplerUser = new HeplerUser(wd);
-        helperContact = new HelperContact(wd);
+        helperUser= new HelperUser(wd);
+
     }
 
     public void stop() {
         wd.quit();
     }
 
-    public HeplerUser getHeplerUser() {
-        return heplerUser;
-    }
-
-    public HelperContact helperContact(){
-        return helperContact;
+    public HelperUser getHelperUser() {
+        return helperUser;
     }
 }

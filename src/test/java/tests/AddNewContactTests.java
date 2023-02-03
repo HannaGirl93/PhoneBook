@@ -13,7 +13,7 @@ public class AddNewContactTests extends TestBase{
     @BeforeMethod
     public void preCondition(){
         if(!app.getHelperUser().isLogged()){
-            app.getHelperUser().login(User.builder().email("bunny@gmail.com").password("Bunny12345$").build());
+            app.getHelperUser().login(User.builder().email("bunny@mail.com").password("Bunny12345$").build());
         }
     }
 
@@ -156,7 +156,7 @@ public class AddNewContactTests extends TestBase{
         app.helperContact().fillContactForm(contact);
         app.helperContact().submitContactForm();
         Assert.assertTrue(app.helperContact().isAddPageStillDisplayed());
-        Assert.assertTrue(app.getHelperUser().isErrorMessageDisplayed("Email not valid: must be a well-formed email address"));
+        Assert.assertTrue(app.getHelperUser().isErrorMessageDisplayed("Email not valid: должно иметь формат адреса электронной почты"));
 
     }
 

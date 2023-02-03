@@ -50,16 +50,16 @@ public class RegistrationTests extends TestBase{
     @Test
     public void registrationUserAlreadyExists(){
         app.getHelperUser().openLoginRegistrationForm();
-        app.getHelperUser().fillLoginRegistrationForm("bunny@gmail.com","Bunny12345$");
+        app.getHelperUser().fillLoginRegistrationForm("bunny@mail.com","Bunny12345$");
         app.getHelperUser().submitRegistration();
         Assert.assertFalse(app.getHelperUser().isLogged());
         Assert.assertTrue(app.getHelperUser().isErrorMessageDisplayed("User already exist"));
 
     }
 //    @AfterMethod
-//    public void poscondition(){
+//    public void postCondition(){
 //        if(){
-//            logout()
+//           logout();
 //        }
 //    }
 

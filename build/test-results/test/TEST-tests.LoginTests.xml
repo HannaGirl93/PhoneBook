@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.LoginTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-01-31T18:02:17" hostname="LAPTOP-AP8CUR31" time="3.321">
-  <properties/>
-  <testcase name="loginSuccessModelFromFile[0](User(email=bunny@mail.com, password=Bunny12345$))" classname="tests.LoginTests" time="1.525"/>
-  <testcase name="loginSuccessModelFromFile[1](User(email=bunny1@mail.com, password=Bunny12345$))" classname="tests.LoginTests" time="0.85"/>
-  <testcase name="loginSuccessModelFromFile[2](User(email=bunny@mail.com, password=Bunny12345$))" classname="tests.LoginTests" time="0.78"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
